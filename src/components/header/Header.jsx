@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
@@ -12,11 +12,20 @@ import ListItem from "@mui/material/ListItem";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Image from "next/image";
 import Link from "next/link";
-
-const pages = ["Home", "Bicycles", "About Us", "Contact"];
+import AppDrawer from "./AppDrawer";
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
+  const [open, setOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
+
+  const toggleDrawer = (newOpen) => () => {
+    setOpen(newOpen);
+  };
+
+  const closeDrawer = () => {
+    setOpen(false);
+  };
 
   const handleOpenNavMenu = (event) => {
     setAnchorElNav(event.currentTarget);
@@ -26,10 +35,31 @@ const Header = () => {
     setAnchorElNav(null);
   };
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <AppBar position="static">
-        <Container maxWidth="xl">
+        <Container
+          maxWidth="xl"
+          className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
+            isScrolled ? "bg-teal-400" : "bg-transparent"
+          }`}
+        >
           <Toolbar disableGutters className="flex justify-between">
             <Box
               className="w-[80px] h-12 relative"
@@ -115,11 +145,12 @@ const Header = () => {
               </List>
             </Box>
             <Box>
-              <ShoppingCartIcon />
+              <ShoppingCartIcon onClick={toggleDrawer(true)} />
             </Box>
           </Toolbar>
         </Container>
       </AppBar>
+      <AppDrawer closeDrawer={closeDrawer} open={open} />
     </>
   );
 };
