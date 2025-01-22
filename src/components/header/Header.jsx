@@ -59,7 +59,7 @@ const Header = () => {
   }, []);
 
   return (
-    <>
+    <header>
       <AppBar position="static">
         <Container
           maxWidth="xl"
@@ -158,7 +158,7 @@ const Header = () => {
         </Container>
       </AppBar>
       <AppDrawer closeDrawer={closeDrawer} open={open} />
-    </>
+    </header>
   );
 };
 

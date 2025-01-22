@@ -3,7 +3,6 @@ import {
   Box,
   Button,
   ListItemIcon,
-  ListItemText,
   Typography,
 } from "@mui/material";
 import List from "@mui/material/List";
@@ -12,7 +11,7 @@ import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 
 const HeroSection = () => {
   return (
-    <main>
+    <section>
       <Box className="bg-[url('https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/bike-hero.jpg')]  lg:h-screen h-auto w-full bg-cover bg-no-repeat bg-center">
         <Box className="flex justify-between items-center ">
           <Box className=" w-1/2 bg-[#4B4F58] bg-opacity-60 h-[95vh] lg:h-screen md:h-[70vh] py-20 px-4 md:px-8 ">
@@ -69,7 +68,7 @@ const HeroSection = () => {
           <Box className="text-white w-1/2 bg-teal-400 bg-opacity-60 h-[95vh] lg:h-screen md:h-[70vh]"></Box>
         </Box>
       </Box>
-    </main>
+    </section>
   );
 };
 

@@ -31,7 +31,7 @@ const NewArrivals = () => {
   ];
 
   return (
-    <main className="mt-24 px-3 md:px-8">
+    <section className="mt-24 px-3 md:px-8">
       <Typography className="text-black text-center md:text-5xl text-3xl font-serif font-bold mb-10 italic" >
         New Arrivals
       </Typography>
@@ -48,7 +48,7 @@ const NewArrivals = () => {
             )
         })}
       </Box>
-    </main>
+    </section>
   );
 };
 
