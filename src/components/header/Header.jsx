@@ -13,11 +13,14 @@ import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import Image from "next/image";
 import Link from "next/link";
 import AppDrawer from "./AppDrawer";
+import { usePathname } from "next/navigation";
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
   const [open, setOpen] = useState(false);
+  const pathname = usePathname();
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isBicyclePage, setIsBicyclePage] = useState(false);
 
   const toggleDrawer = (newOpen) => () => {
     setOpen(newOpen);
@@ -34,6 +37,10 @@ const Header = () => {
   const handleCloseNavMenu = () => {
     setAnchorElNav(null);
   };
+
+  useEffect(() => {
+    setIsBicyclePage(pathname === "/bicycles");
+  }, [pathname]);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -57,7 +64,7 @@ const Header = () => {
         <Container
           maxWidth="xl"
           className={`fixed top-0 left-0 w-full z-10 transition-all duration-300 ${
-            isScrolled ? "bg-teal-400" : "bg-transparent"
+            isBicyclePage || isScrolled ? "bg-teal-400" : "bg-transparent"
           }`}
         >
           <Toolbar disableGutters className="flex justify-between">
