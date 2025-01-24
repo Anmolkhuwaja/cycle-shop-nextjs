@@ -12,9 +12,8 @@ import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 const BikeCollection = () => {
   return (
     <section className="mt-10">
-      <div className=" text-white">
-        {/* Parallax Section 1 */}
-        <div
+      <Box className=" text-white">
+        <Box
           className="relative h-[100vh] md:h-[55vh] lg:h-[100vh] bg-fixed bg-center bg-cover opacity-100"
           style={{
             backgroundImage:
@@ -113,10 +112,9 @@ const BikeCollection = () => {
               </Button>
             </Box>
           </Box>
-        </div>
+        </Box>
 
-        {/* Parallax Section 2 */}
-        <div
+        <Box
           className="relative h-[100vh] md:h-[55vh] lg:h-[100vh] bg-fixed bg-center bg-cover opacity-100"
           style={{
             backgroundImage:
@@ -129,7 +127,7 @@ const BikeCollection = () => {
                 Discover The Collection
               </Typography>
               <Typography className="text-5xl my-8 font-bold font-serif">
-                Mountain Bikes
+                City Bikes
               </Typography>
               <Typography variant="body1" className="text-slate-200 font-bold">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -215,10 +213,9 @@ const BikeCollection = () => {
               </Button>
             </Box>
           </Box>
-        </div>
+        </Box>
 
-        {/* Parallax Section 3 */}
-        <div
+        <Box
           className="relative h-[100vh] md:h-[55vh] lg:h-[100vh] bg-fixed bg-center bg-cover opacity-100"
           style={{
             backgroundImage:
@@ -231,7 +228,7 @@ const BikeCollection = () => {
                 Discover The Collection
               </Typography>
               <Typography className="text-5xl my-8 font-bold font-serif">
-                Mountain Bikes
+                Speciality Bikes
               </Typography>
               <Typography variant="body1" className="text-slate-200 font-bold">
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit
@@ -317,8 +314,8 @@ const BikeCollection = () => {
               </Button>
             </Box>
           </Box>
-        </div>
-      </div>
+        </Box>
+      </Box>
     </section>
   );
 };
