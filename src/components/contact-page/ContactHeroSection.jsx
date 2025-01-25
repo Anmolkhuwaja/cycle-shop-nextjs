@@ -39,7 +39,7 @@ const ContactHeroSection = () => {
 
         <Box className="absolute bg-gradient-to-b from-transparent via-black/75 to-black/75 inset-0 h-[70vh] overflow-hidden w-full"></Box>
 
-        <Box className="relative -mt-14 flex flex-col items-center justify-center h-full text-white text-center">
+        <Box className="relative mt-7 flex flex-col items-center justify-center h-full text-white text-center">
           <Typography className="text-6xl md:text-8xl font-bold mb-4 font-serif">
             Contact Us
           </Typography>

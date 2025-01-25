@@ -5,7 +5,7 @@ import React from "react";
 
 const Footer = () => {
   return (
-    <footer className="bg-[#14261C] lg:h-[65vh] md:h-[40vh]">
+    <footer className="bg-[#14261C] lg:h-[68vh] md:h-[40vh]">
       <Box className="flex flex-col md:flex-row justify-between px-6 gap-8 md:py-20 py-10  md:px-20">
         <Box className="w-[80px] h-12 relative">
           <Image
