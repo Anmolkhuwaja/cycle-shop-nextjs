@@ -154,9 +154,10 @@ const OurStory = () => {
         </Typography>
 
         <Box className="flex flex-col md:flex-row gap-8 md:gap-6 justify-between items-center px-3">
-
           <Box className="text-start">
-            <Typography className="text-teal-400 font-bold text-xl">01.</Typography>
+            <Typography className="text-teal-400 font-bold text-xl">
+              01.
+            </Typography>
             <Typography className="font-bold font-serif text-2xl my-2">
               Research
             </Typography>
@@ -167,9 +168,11 @@ const OurStory = () => {
           </Box>
 
           <Box className="text-start">
-            <Typography className="text-teal-400 font-bold text-xl">02.</Typography>
+            <Typography className="text-teal-400 font-bold text-xl">
+              02.
+            </Typography>
             <Typography className="font-bold font-serif text-2xl my-2">
-            Idea & Concept
+              Idea & Concept
             </Typography>
             <Typography variant="body1" className="text-gray-600 font-bold">
               Lorem ipsum dolor sit amet, consec tetur elit. Ut elit tellus,
@@ -178,9 +181,11 @@ const OurStory = () => {
           </Box>
 
           <Box className="text-start">
-            <Typography className="text-teal-400 font-bold text-xl">03.</Typography>
+            <Typography className="text-teal-400 font-bold text-xl">
+              03.
+            </Typography>
             <Typography className="font-bold font-serif text-2xl my-2">
-            Design & Production​
+              Design & Production​
             </Typography>
             <Typography variant="body1" className="text-gray-600 font-bold">
               Lorem ipsum dolor sit amet, consec tetur elit. Ut elit tellus,
@@ -189,16 +194,17 @@ const OurStory = () => {
           </Box>
 
           <Box className="text-start">
-            <Typography className="text-teal-400 font-bold text-xl">04.</Typography>
+            <Typography className="text-teal-400 font-bold text-xl">
+              04.
+            </Typography>
             <Typography className="font-bold font-serif text-2xl my-2">
-            Sales & Service​
+              Sales & Service​
             </Typography>
             <Typography variant="body1" className="text-gray-600 font-bold">
               Lorem ipsum dolor sit amet, consec tetur elit. Ut elit tellus,
               luctus nec ullam corper.
             </Typography>
           </Box>
-
         </Box>
       </section>
     </>

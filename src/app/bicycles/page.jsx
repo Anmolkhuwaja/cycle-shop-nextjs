@@ -1,10 +1,10 @@
 import React from 'react'
 import Bicycles from '../../components/bicycles-page/Bicycles'
 
-const BicyclesPage = () => {
+const BicyclesPage = ({ searchParams }) => {
   return (
     <>
-    <Bicycles />
+    <Bicycles searchParams={searchParams} />
     </>
   )
 }

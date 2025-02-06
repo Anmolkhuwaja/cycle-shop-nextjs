@@ -14,6 +14,7 @@ import Image from "next/image";
 import Link from "next/link";
 import AppDrawer from "./AppDrawer";
 import { usePathname } from "next/navigation";
+import { Badge, Typography } from "@mui/material";
 
 const Header = () => {
   const [anchorElNav, setAnchorElNav] = useState(null);
@@ -74,6 +75,7 @@ const Header = () => {
             >
               <Image
                 fill
+                alt="logo"
                 src={
                   "https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/logo-1-80x48.png"
                 }
@@ -130,6 +132,7 @@ const Header = () => {
             >
               <Image
                 fill
+                alt="logo"
                 src={
                   "https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/logo-1-80x48.png"
                 }
@@ -151,8 +154,20 @@ const Header = () => {
                 </ListItem>
               </List>
             </Box>
-            <Box>
-              <ShoppingCartIcon onClick={toggleDrawer(true)} />
+            <Box className="flex gap-2">
+              <Typography className="font-bold">$0.00</Typography>
+              <Badge
+                badgeContent={
+                  <span className="bg-black text-white rounded-full w-2 h-2 font-bold flex justify-center items-center text-center p-2">
+                    0
+                  </span>
+                }
+              >
+                <ShoppingCartIcon
+                  className="cursor-pointer text-white"
+                  onClick={toggleDrawer(true)}
+                />
+              </Badge>
             </Box>
           </Toolbar>
         </Container>

@@ -32,20 +32,24 @@ const NewArrivals = () => {
 
   return (
     <section className="mt-24 px-3 md:px-8">
-      <Typography className="text-black text-center md:text-5xl text-3xl font-serif font-bold mb-10 italic" >
+      <Typography className="text-black text-center md:text-5xl text-3xl font-serif font-bold mb-10 italic">
         New Arrivals
       </Typography>
       <Box className="flex justify-between items-center gap-5 flex-wrap">
-        {products.map((item)=>{
-            return(
-               <Box key={item.id} className="w-full md:w-[48%] lg:w-[23%] ">
-               <Image width={400} height={400} src={item.img} alt={item.title}/>
-               <Box className="flex flex-col justify-center items-center py-5">
-                <Typography className="font-extrabold font-serif italic">{item.title}</Typography>
-                <Typography className="font-bold text-gray-700" >$ {item.price}</Typography>
-               </Box>
-               </Box>
-            )
+        {products.map((item) => {
+          return (
+            <Box key={item.id} className="w-full md:w-[48%] lg:w-[23%] ">
+              <Image width={400} height={400} src={item.img} alt={item.title} />
+              <Box className="flex flex-col justify-center items-center py-5">
+                <Typography className="font-extrabold font-serif italic">
+                  {item.title}
+                </Typography>
+                <Typography className="font-bold text-gray-700">
+                  $ {item.price}
+                </Typography>
+              </Box>
+            </Box>
+          );
         })}
       </Box>
     </section>

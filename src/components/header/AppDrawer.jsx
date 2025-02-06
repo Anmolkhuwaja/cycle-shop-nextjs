@@ -1,21 +1,26 @@
-"use client";
-import React, { useState } from "react";
+import React from "react";
 import Box from "@mui/material/Box";
 import Drawer from "@mui/material/Drawer";
-import { Typography } from "@mui/material";
+import { Divider, Typography } from "@mui/material";
+import CloseIcon from "@mui/icons-material/Close";
 
 const AppDrawer = (props) => {
-    const { closeDrawer, open } = props;
+  const { closeDrawer, open } = props;
 
   return (
     <>
-      {/* <Button>Open Right Drawer</Button> */}
-      <Drawer anchor="right"  open={open}  onClose={closeDrawer} >
-      <Box width={350} role="presentation"  onClick={closeDrawer}>
-      <Typography>hi</Typography>
-      </Box>
+      <Drawer anchor="right" open={open} onClose={closeDrawer}>
+        <Box
+          width={350}
+          role="presentation"
+          className="flex justify-between items-center p-4"
+        >
+          <Typography className="font-bold text-lg">Shopping Cart</Typography>
+          <CloseIcon className="cursor-pointer" onClick={closeDrawer} />
+        </Box>
+        <Divider />
 
-      <Typography>Hello</Typography>
+        <Typography>Hello</Typography>
       </Drawer>
     </>
   );

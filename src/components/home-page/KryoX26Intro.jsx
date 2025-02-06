@@ -1,10 +1,10 @@
-import { Box, Button, Typography } from '@mui/material'
-import React from 'react'
+import { Box, Button, Typography } from "@mui/material";
+import React from "react";
 
 const KryoX26Intro = () => {
   return (
     <>
-       <section className="w-[100%]">
+      <section className="w-[100%]">
         <Box
           className="relative h-[70vh] w-[100%] md:h-[55vh] lg:h-[100vh] bg-fixed bg-center bg-cover opacity-100"
           style={{
@@ -41,9 +41,8 @@ const KryoX26Intro = () => {
           </Box>
         </Box>
       </section>
-
     </>
-  )
-}
+  );
+};
 
-export default KryoX26Intro
+export default KryoX26Intro;

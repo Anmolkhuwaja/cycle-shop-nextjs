@@ -1,10 +1,5 @@
 import React from "react";
-import {
-  Box,
-  Button,
-  ListItemIcon,
-  Typography,
-} from "@mui/material";
+import { Box, Button, ListItemIcon, Typography } from "@mui/material";
 import List from "@mui/material/List";
 import ListItem from "@mui/material/ListItem";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
@@ -12,9 +7,9 @@ import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 const HeroSection = () => {
   return (
     <section>
-      <Box className="bg-[url('https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/bike-hero.jpg')]  lg:h-screen h-auto w-full bg-cover bg-no-repeat bg-center">
+      <Box className="bg-[url('https://websitedemos.net/cycle-shop-02/wp-content/uploads/sites/789/2021/03/bike-hero.jpg')]  lg:h-[110vh] h-auto w-full bg-cover bg-no-repeat bg-center">
         <Box className="flex justify-between items-center ">
-          <Box className=" w-1/2 bg-[#4B4F58] bg-opacity-60 h-[95vh] lg:h-screen md:h-[70vh] py-20 px-4 md:px-8 ">
+          <Box className=" w-1/2 bg-[#4B4F58] bg-opacity-60 h-[95vh] lg:h-[110vh] md:h-[70vh] py-20 px-4 md:px-8 ">
             <Typography className="text-white md:text-3xl font-serif font-bold mt-4 italic">
               Newly Launched
             </Typography>
@@ -65,7 +60,7 @@ const HeroSection = () => {
               Buy Now
             </Button>
           </Box>
-          <Box className="text-white w-1/2 bg-teal-400 bg-opacity-60 h-[95vh] lg:h-screen md:h-[70vh]"></Box>
+          <Box className="text-white w-1/2 bg-teal-400 bg-opacity-60 h-[95vh] lg:h-[110vh] md:h-[70vh]"></Box>
         </Box>
       </Box>
     </section>
